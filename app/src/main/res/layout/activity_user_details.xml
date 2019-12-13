@@ -13,6 +13,7 @@
         android:layout_height="100dp"
         android:gravity="center"
         android:text="provide your information"
+        android:textSize="20sp"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"/>
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/phone"
         android:hint="phone"
+        android:inputType="numberDecimal"
         android:gravity="center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"/>
@@ -45,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:text="SAVE"
         android:background="@color/colorPrimary"
         android:id="@+id/save_btn"/>

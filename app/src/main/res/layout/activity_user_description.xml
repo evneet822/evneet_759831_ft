@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".UserDescriptionActivity">
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/main_activity"
-        android:name="com.example.evneet_759831_ft.MainFragment"/>
+        android:id="@+id/description_frag"
+        android:name="com.example.evneet_759831_ft.UserDescriptionFragment"/>
 
 </LinearLayout>

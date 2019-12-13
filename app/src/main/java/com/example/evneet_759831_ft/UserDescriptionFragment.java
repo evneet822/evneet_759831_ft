@@ -28,4 +28,6 @@ public class UserDescriptionFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_user_description, container, false);
     }
 
+
+
 }

@@ -42,21 +42,10 @@ public class IconAdaptor extends BaseAdapter {
         if (convertView == null)
             convertView = LayoutInflater.from(context).inflate(R.layout.cell_item,null);
         ImageView imageView = convertView.findViewById(R.id.image_view);
-        //shuffle(images);
+
         imageView.setBackgroundResource(images[position]);
-//        imageView.setImageResource(images[position]);
         return convertView;
     }
-/*
-    public void shuffle(int[] intArray){
-        Random random = new Random();
-        for (int i = intArray.length-1;i>=0;i--){
-            int index = random.nextInt(i+1);
-            int temp = intArray[index];
-            intArray[index] = intArray[i];
-            intArray[i] = temp;
 
-        }
-    }*/
 
 }

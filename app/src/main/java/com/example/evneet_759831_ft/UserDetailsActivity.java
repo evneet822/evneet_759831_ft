@@ -33,8 +33,8 @@ public class UserDetailsActivity extends AppCompatActivity {
 
                 if (!name.getText().toString().isEmpty()&!email.getText().toString().isEmpty()&!phone.getText().toString().isEmpty()){
                     User u = new User(name_entered,email_entered,phone_entered);
-                    User.userDetails.add(u);
                     Intent intent = new Intent(UserDetailsActivity.this,VerifyActivity.class);
+                    intent.putExtra("user",u);
                     startActivity(intent);
 
                 }else {

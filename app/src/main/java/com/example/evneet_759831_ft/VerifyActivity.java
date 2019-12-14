@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -102,13 +103,28 @@ public class VerifyActivity extends AppCompatActivity {
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
+                            Intent intent = getIntent();
+                            User user = (User) intent.getSerializableExtra("user");
+                            User.userDetails.add(user);
+                            Intent intent1 = new Intent(VerifyActivity.this,MainActivity.class);
+                            intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent1);
                         }
                     });
                     alertDialog.show();
 
                 }else {
-                    Toast.makeText(VerifyActivity.this, "not verified", Toast.LENGTH_SHORT).show();
+                    AlertDialog alertDialog = new AlertDialog.Builder(VerifyActivity.this).create();
+                    alertDialog.setTitle("Not Verified");
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent1 = new Intent(VerifyActivity.this,MainActivity.class);
+                            intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent1);
+                        }
+                    });
+                    alertDialog.show();
                 }
 
 

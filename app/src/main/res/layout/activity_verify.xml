@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".VerifyActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the traffic lights"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+<!--    <GridLayout-->
+<!--        android:layout_width="330dp"-->
+<!--        android:layout_height="380dp"-->
+<!--        android:id="@+id/gridlayout"-->
+<!--        android:rowCount="3"-->
+<!--        android:columnCount="3"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--       android:layout_marginLeft="30dp">-->
+
+<!--        -->
+<!--    </GridLayout>-->
+    <GridView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:id="@+id/gridView"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:numColumns="3"/>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp">
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm not a robot"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageButton
+            android:id="@+id/image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:src="@drawable/ic_autorenew"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VERIFY"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
+</LinearLayout>

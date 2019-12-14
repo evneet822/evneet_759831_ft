@@ -2,6 +2,7 @@ package com.example.evneet_759831_ft;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +34,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                 if (!name.getText().toString().isEmpty()&!email.getText().toString().isEmpty()&!phone.getText().toString().isEmpty()){
                     User u = new User(name_entered,email_entered,phone_entered);
                     User.userDetails.add(u);
-                    Toast.makeText(UserDetailsActivity.this, "saved succesfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(UserDetailsActivity.this,VerifyActivity.class);
+                    startActivity(intent);
 
                 }else {
                     Toast.makeText(UserDetailsActivity.this, "you should fill all the feilds", Toast.LENGTH_SHORT).show();

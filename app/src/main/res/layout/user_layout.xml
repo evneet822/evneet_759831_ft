@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/textView_name"
         android:text="email"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="30dp"/>
     <TextView
         android:id="@+id/phone"
@@ -33,6 +33,6 @@
         android:layout_toRightOf="@id/textView_name"
         android:layout_below="@+id/email"
         android:text="phone"
-        android:layout_marginLeft="200dp"/>
+        android:layout_marginLeft="130dp"/>
 
 </RelativeLayout>
